@@ -7,9 +7,20 @@
 //
 
 #include <stdio.h>
+#include "binaryTree.h"
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!的分身乏术的发生的发生\n");
+    TREENODE *treeRoot = NULL;
+    
+    printf("二叉树每个节点所占内存 大小是%d\n", treeNodeTypeLength());
+    for (int i=9; i<20; i++) {
+        treeRoot = insert2Tree(treeRoot, i);
+    }
+    printf("创建的二叉树根节点是%d\n",treeRoot->data);
+    printf("二叉树的后序遍历结果:");
+    houxubianli(treeRoot);
+    printf("\n");
+    
     return 0;
 }
