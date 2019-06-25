@@ -79,7 +79,7 @@ void visit(TREENODE node) {
 }
 
 /**
- <#Description#>
+ 二叉树的后序遍历
 
  @param root <#root description#>
  */
@@ -91,7 +91,7 @@ void houxubianli(TREENODE *root) {
     TREENODE* p = root;
     stack[++top] = p;// 先入站跟节点
     while (top > -1) {
-        while (p && loop) { // 按照右节点左节点的顺序入站
+        while (p && loop) { // 按照右节点左节点的顺序入站，loop用于控制出栈时节点是否时当前栈顶节点的兄弟节点，如果是兄弟节点也的来一次这样的入栈操作
             if (p->right) stack[++top] = p->right;
             if (p->left) stack[++top] = p->left;
             if (p->left) p = p->left;
@@ -105,5 +105,46 @@ void houxubianli(TREENODE *root) {
         if(p == stack[top]->left || p == stack[top]->right) loop = 0;
         else  loop = 1;
         p = stack[top];
+    }
+}
+
+/**
+ 二叉树的中序遍历
+
+ @param root <#root description#>
+ */
+void zhongxubianli(TREENODE* root) {
+    TREENODE* stack[50];
+    TREENODE* p = root;
+    int top = -1;
+    for (int i=0; i<50; i++) {
+        stack[i] = NULL;
+    }
+    
+    while (top > -1 || p) {
+        while (p) {
+            stack[++top] = p;
+            p = p->left;
+        }
+        p = stack[top--];
+        printf("%d\t", p->data);
+        p = p->right;
+    }
+}
+
+void qianxubianli(TREENODE* root) {
+    TREENODE* stack[50];
+    TREENODE* p;
+    int top = -1;
+    for (int i=0; i<50; i++) {
+        stack[i] = NULL;
+    }
+    stack[++top] = root;    // 根入栈
+    
+    while (top > -1) {
+        p = stack[top--];
+        printf("%d\t",p->data);
+        if (p->right) stack[++top] = p->right;
+        if (p->left) stack[++top] = p->left;
     }
 }

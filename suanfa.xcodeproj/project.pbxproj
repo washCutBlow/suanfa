@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780D1C4322210C880096573E /* binaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 780D1C4222210C880096573E /* binaryTree.c */; };
+		780D1C46222180140096573E /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 780D1C45222180140096573E /* stack.c */; };
 		78AF97022104CF560049CF71 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 78AF97012104CF560049CF71 /* main.c */; };
+		78BE3DA822631EB400055AA3 /* redBlackTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BE3DA722631EB400055AA3 /* redBlackTree.c */; };
+		78BE3DAB22632F5800055AA3 /* leetcode.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BE3DAA22632F5800055AA3 /* leetcode.c */; };
+		78ED009A211535E200324DCC /* hashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 78ED0099211535E200324DCC /* hashTable.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		780D1C4122210C880096573E /* binaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binaryTree.h; sourceTree = "<group>"; };
+		780D1C4222210C880096573E /* binaryTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = binaryTree.c; sourceTree = "<group>"; };
+		780D1C44222180140096573E /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		780D1C45222180140096573E /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		78AF96FE2104CF560049CF71 /* suanfa */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = suanfa; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF97012104CF560049CF71 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		78BE3DA622631EB400055AA3 /* redBlackTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = redBlackTree.h; sourceTree = "<group>"; };
+		78BE3DA722631EB400055AA3 /* redBlackTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = redBlackTree.c; sourceTree = "<group>"; };
+		78BE3DA922632F5800055AA3 /* leetcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leetcode.h; sourceTree = "<group>"; };
+		78BE3DAA22632F5800055AA3 /* leetcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = leetcode.c; sourceTree = "<group>"; };
+		78ED0099211535E200324DCC /* hashTable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hashTable.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +52,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780A98E922C22610005CA66F /* bigData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bigData;
+			sourceTree = "<group>";
+		};
 		78AF96F52104CF560049CF71 = {
 			isa = PBXGroup;
 			children = (
+				780A98E922C22610005CA66F /* bigData */,
 				78AF97002104CF560049CF71 /* suanfa */,
 				78AF96FF2104CF560049CF71 /* Products */,
 			);
@@ -58,6 +80,15 @@
 			isa = PBXGroup;
 			children = (
 				78AF97012104CF560049CF71 /* main.c */,
+				78ED0099211535E200324DCC /* hashTable.c */,
+				780D1C4122210C880096573E /* binaryTree.h */,
+				780D1C4222210C880096573E /* binaryTree.c */,
+				780D1C44222180140096573E /* stack.h */,
+				780D1C45222180140096573E /* stack.c */,
+				78BE3DA622631EB400055AA3 /* redBlackTree.h */,
+				78BE3DA722631EB400055AA3 /* redBlackTree.c */,
+				78BE3DA922632F5800055AA3 /* leetcode.h */,
+				78BE3DAA22632F5800055AA3 /* leetcode.c */,
 			);
 			path = suanfa;
 			sourceTree = "<group>";
@@ -118,7 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED009A211535E200324DCC /* hashTable.c in Sources */,
+				78BE3DA822631EB400055AA3 /* redBlackTree.c in Sources */,
+				78BE3DAB22632F5800055AA3 /* leetcode.c in Sources */,
 				78AF97022104CF560049CF71 /* main.c in Sources */,
+				780D1C46222180140096573E /* stack.c in Sources */,
+				780D1C4322210C880096573E /* binaryTree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

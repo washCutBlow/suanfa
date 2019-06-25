@@ -22,4 +22,6 @@ typedef struct TREENODE {
 extern int treeNodeTypeLength(void);
 extern TREENODE * insert2Tree(TREENODE *, int);
 extern void houxubianli(TREENODE *);
+extern void zhongxubianli(TREENODE*);
+extern void qianxubianli(TREENODE*);
 #endif /* binaryTree_h */
