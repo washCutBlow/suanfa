@@ -285,3 +285,101 @@ float findKth(int *a, int *b,int aStart, int bStart, int aLen, int bLen, int k) 
         return a[aStart+p1-1];
     }
 }
+
+/*博弈树
+ * 动态规划解决效率问题；把已经计算好的子问题存储起来
+ * */
+/*概率模拟法 求pai值
+ *
+ * */
+
+/*表达式求值，用两个栈，一个存数字，一个存运算符
+ * 运算符按照优先级入栈 优先级越低越靠近栈底，左括号直接入栈
+ * 遇到左括号，无条件的压入到运算符栈中，如果是右括号，
+ * 你波兰表达式
+ * */
+/*
+ * 分酒问题 泊松分酒问题
+ *
+ * 状态树
+ * */
+/*
+ * 迷宫问题
+ * */
+
+/*排序算法*/
+// 插入排序 时间复杂度n2
+void insertSort(int *a, int n) {
+    for (int i = 0; i < n; ++i) {
+        printf("%d\t", a[i]);
+    }
+    printf("\n");
+
+    int temp, j;
+    for (int i = 1; i <n ; ++i) {
+        temp = a[i];
+        j = i-1;
+        while (j >=0 && temp<a[j]) {
+            a[j+1] = a[j];
+            j--;
+        }
+        a[j+1] = temp;
+    }
+
+    for (int i = 0; i < n; ++i) {
+        printf("%d\t", a[i]);
+    }
+    printf("\n");
+}
+//合并一个数组中的左右两段有序子数组 low mid high都是数组a的索引
+// 复杂度是nlogn
+void mergeArraySegment(int *a, int low, int mid, int high) {
+    int temp[50];
+    int i = low ,j=mid+1, k=0;
+    while (i<=mid && j<=high) {
+        if (a[i] < a[j]) {
+            temp[k++] = a[i];
+            i++;
+        } else if (a[j] < a[i]) {
+            temp[k++] = a[j];
+            j++;
+        } else {
+            temp[k++] = a[i];
+            i++;
+            j++;
+        }
+    }
+
+    while (i<=mid) {
+        temp[k++] = a[i];
+        i++;
+    }
+    while (j<=high) {
+        temp[k++] = a[j];
+        j++;
+    }
+
+    for (int i = 0; i < k ; ++i) {
+        a[low+i] = temp[i]; // 放回数组a中
+    }
+}
+// low high 都是索引
+void mergeSort(int *a, int low, int high) {
+    int mid = (high-low)/2+low;
+
+    if (low < high) {
+        mergeSort(a, low, mid);
+        mergeSort(a, mid+1, high);
+        mergeArraySegment(a, low, mid, high);
+    }
+}
+
+/*队列DFS与BFS*/
+typedef struct QUEUE {
+
+} QUEUE;
+// 创建一个容量为N的空队列
+
+// 妙趣横生说算法pdf
+//第一章顺序表
+

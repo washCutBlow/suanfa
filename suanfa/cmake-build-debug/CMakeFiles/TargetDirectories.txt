@@ -1,0 +1,4 @@
+/Users/zhanglei061/src/c/suanfa/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/zhanglei061/src/c/suanfa/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zhanglei061/src/c/suanfa/cmake-build-debug/CMakeFiles/main98.dir
+/Users/zhanglei061/src/c/suanfa/cmake-build-debug/CMakeFiles/suanfa.dir

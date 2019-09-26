@@ -10,6 +10,18 @@
 #define leetcode_h
 
 #include <stdio.h>
+// mit算法导论手写学习
+void insertSort(int *a, int n);
+void mergeSort(int *a, int low, int high);
+
+
+
+
+
+
+
+
+
 /*链表反转*/
 typedef struct NODE {
     int data;
@@ -23,5 +35,4 @@ extern NODE *createList(void);
 extern NODE *reverseList(NODE *list);
 void luoxuan(void);
 void aContainB(char *a, char *b);
-
 #endif /* leetcode_h */
